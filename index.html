@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- подключение библиотек -->
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- шрифты -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- иконки -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- font awsome -->
+    <script src="https://kit.fontawesome.com/d05f7b85c8.js" crossorigin="anonymous"></script>
+    <title>Hello, world!</title>
+  </head>
+
+  <!--  nav baar левое-->
+  <body>
+    <nav class="sticky-top navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Калькулятор займов</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 top-menu">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">О нас</a>
+            </li>
+            <!-- выпадающий список -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Наши тарифы
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">тест</a>
+            </li>
+          </ul>
+
+          <!-- правое меню  -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 top-menu">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"></a>
+            </li>
+            <!-- правое меню выпадающий список -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                ><i class="fa-solid fa-user-astronaut"></i
+              ></a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
+                <li>
+                  <a
+                    class="dropdown-item mb-2"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    href="#"
+                    >Регистрация</a
+                  >
+                </li>
+                <!-- <hr class="dropdown-divider"> bg-success bg-primary -->
+                <li><a class="dropdown-item" href="#">Авторизация</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                ><i class="fa-solid fa-cart-arrow-down"></i
+              ></a>
+            </li>
+          </ul>
+
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Поиск"
+              aria-label="Search"
+            />
+            <!-- поиск -->
+
+            <button class="btn btn-outline-success disabled" type="submit">Искать!</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- MODAL -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Form</h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="row mb-3">
+                <label for="inputEmail" class="col-sm-2 col-from-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="inputEmail" />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="inputPass" class="col-sm-2 col-from-label">Pass</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="inputPass" />
+                </div>
+              </div>
+              <fieldset>
+                <div class="row mb-3">
+                  <legend class="col-from-label col-sm-2">radio</legend>
+                  <div class="col-sm-10">
+                    <div class="form-check">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="radios"
+                        value="option1"
+                        id="radios1"
+                        checked
+                      />
+                      <label for="radios1" class="form-check-label">Radio 1</label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="radios"
+                        value="option1"
+                        id="radios2"
+                      />
+                      <label for="radios2" class="form-check-label">Radio 1</label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="radios"
+                        value="option1"
+                        id="radios3"
+                        disabled
+                      />
+                      <label for="radios3" class="form-check-label">Radio 1</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-form-label col-sm-2">Запомнить пароль?</div>
+                  <div class="col-sm-10">
+                    <div class="form-check">
+                      <input type="checkbox" id="gridcheck" class="form-check-input" />
+                      <label for="gridcheck" class="form-check-label"> save password</label>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary">Сохранить изменения</button>
+            <button class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MODAL -->
+    <!-- <div class="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   -->
+
+    <!-- carousel -->
+
+    <div class="container-fluid my-carousel">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+        data-bs-interval="5000"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/stock (1).jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="img/stock (3).jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="img/stock (4).jpg" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <section class="main-content">
+      <!-- счетчик -->
+      <div class="container-md">
+        <div class="row">
+          <!-- col-lg-6 col-sm-6 -->
+          <div class="col-lg-12 col-sm-12 mb-3">
+            <div class="product-card">
+              <!-- наполнение карточки -->
+              <h5 class="card-header">Card</h5>
+              <div class="card-body">
+                <div class="counter">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem suscipit
+                  reprehenderit sit doloribus atque harum nisi, quam perferendis minus doloremque
+                  consequuntur modi ad quibusdam? Mollitia assumenda eaque expedita culpa, cumque
+                  harum, doloribus, officiis eligendi iusto similique quod omnis! Dicta, quae.
+                  Quisquam veniam consequuntur, dolorem animi ratione dolore error itaque. Facilis
+                  repudiandae aspernatur sit aperiam veritatis fuga cumque, delectus fugit officiis.
+                  Asperiores architecto blanditiis at quis tenetur, eveniet quidem soluta modi
+                  veniam sapiente molestias, ipsam magnam natus rerum neque quam. Consequuntur
+                  officiis qui cumque nam quibusdam consectetur ullam pariatur minus non dolor,
+                  dicta, earum corrupti illum ipsum repudiandae molestiae nobis eaque mollitia nulla
+                  fugiat rem ducimus dignissimos iusto? Molestiae quibusdam dolorem omnis excepturi
+                  quae eaque exercitationem blanditiis recusandae ad nostrum quaerat asperiores,
+                  facilis provident, dolores error cumque deserunt nesciunt. Harum deleniti at
+                  ullam. Labore odio voluptas tempora accusantium. Similique deleniti adipisci
+                  consequatur, eveniet perferendis vitae optio ex quam eaque rem suscipit ipsum
+                  earum, excepturi sed tempora eos natus exercitationem culpa eius consectetur
+                  numquam ratione vero laboriosam. Odit, quae blanditiis? Repellat, reprehenderit
+                  amet! Veniam ipsa facere eius corporis laborum quidem pariatur reprehenderit
+                  sapiente blanditiis quas dolor deserunt rem nam in nulla quis rerum esse dolores,
+                  distinctio illo dolorum cupiditate! Nesciunt et, at voluptatibus vitae recusandae
+                  impedit sit adipisci laudantium odit voluptate vel provident modi qui. Nulla
+                  tenetur quod iure, molestias atque similique mollitia in nesciunt quidem deserunt?
+                  Est, quis labore? Dolore assumenda provident inventore quam tempora praesentium
+                  pariatur optio ullam, eos illo omnis at id quidem architecto impedit voluptatibus
+                  placeat ipsum ea numquam deserunt explicabo facilis labore quo sit. Consequatur
+                  porro ex, sit molestias provident aspernatur quos voluptate dolorum impedit atque
+                  sed totam veniam magnam harum neque minima architecto adipisci sint! Praesentium
+                  earum magnam incidunt repellendus, eveniet culpa ad voluptate numquam quasi
+                  distinctio labore tempore soluta nihil explicabo omnis odio rerum corporis enim
+                  corrupti? Quae perspiciatis amet, odit voluptatem natus veritatis impedit. Veniam
+                  delectus minus quo incidunt dolorum quos beatae atque quisquam nostrum earum, id
+                  aspernatur facere minima neque voluptas accusamus fugiat reprehenderit esse sint,
+                  sed, optio deserunt ipsa culpa? Architecto qui tempore at, officia ratione minima
+                  dignissimos est soluta, beatae, praesentium laborum. Atque, in sed ratione itaque
+                  fugit voluptatum sequi reiciendis esse architecto minima ab molestias optio sint
+                  eveniet ipsam provident sunt fugiat? Exercitationem odit libero, necessitatibus
+                  optio obcaecati molestias fugit numquam ipsam eligendi accusantium modi assumenda
+                  eius vero ratione eos dolore! Laboriosam, quibusdam? Porro sit fuga sint aliquam
+                  nihil asperiores modi illo a deserunt expedita repudiandae officiis enim nostrum
+                  aperiam suscipit mollitia, quae, itaque iusto dolorum cum veniam! Quos magnam
+                  maiores temporibus vel assumenda nisi quam, sit libero nulla ad aliquam doloribus
+                  qui? Porro a voluptates sit sed necessitatibus cupiditate ullam. Deserunt expedita
+                  nisi animi placeat! Enim dicta, minima, ut blanditiis aliquid possimus amet
+                  laboriosam vitae id officiis facilis explicabo, aut neque dignissimos
+                  reprehenderit esse. Dolorum, earum atque. Adipisci blanditiis deleniti quidem
+                  dolore, asperiores quae dolor officia ipsam porro et dicta reprehenderit
+                  reiciendis facilis saepe illum magni ad voluptate eius ex nam rem sequi eum!
+                  Dolorum soluta delectus distinctio hic tenetur, harum temporibus inventore
+                  aspernatur qui reprehenderit at rerum quas doloribus deserunt debitis, sapiente
+                  est vel eius nobis unde! Pariatur, aut explicabo! Voluptatem non, veniam vitae
+                  repellat debitis ab quibusdam, exercitationem totam repudiandae temporibus
+                  ratione. Quaerat eos harum dolore repellat ducimus reprehenderit temporibus quos
+                  excepturi laborum officia rerum, ex, aspernatur fugiat ab quisquam! Officiis dicta
+                  explicabo corporis? Repellat hic debitis voluptatibus neque soluta iste nesciunt,
+                  perspiciatis numquam. A distinctio sit corporis facilis consequuntur repudiandae
+                  deserunt, porro, ex, est unde atque quam voluptate voluptatibus? Architecto iste
+                  delectus molestias, accusantium odit quasi itaque eum quidem consequuntur neque.
+                  Quasi quia quisquam fugiat sequi officia corporis quo saepe! Quam optio
+                  perspiciatis corporis animi quasi excepturi sequi inventore ratione, possimus
+                  aspernatur sapiente vel iste repellendus nesciunt vero rem quia eum autem,
+                  necessitatibus libero quis, modi id blanditiis? Maxime necessitatibus consequatur,
+                  iste omnis deleniti sit debitis. Expedita, qui, non quos reiciendis sit rerum
+                  possimus provident officia, similique dolorem nobis hic veritatis necessitatibus
+                  dolor vel quidem ut omnis officiis atque ab voluptates pariatur dignissimos ad.
+                  Libero iusto ratione quas enim, perferendis dolorem sequi, hic consequatur omnis
+                  nihil animi beatae repudiandae? Esse unde minus distinctio alias itaque, amet
+                  reprehenderit dolorum iusto, placeat animi nesciunt ad non dicta, excepturi veniam
+                  neque officiis. Magnam asperiores aliquid aperiam facilis doloremque iusto vero
+                  nulla! Id magnam neque laborum similique perspiciatis, illo blanditiis nihil! Quia
+                  error non nisi omnis facere dolores laboriosam nemo tempora, iure aliquam
+                  voluptatem velit voluptas rem fugiat ratione nobis recusandae consequuntur
+                  quaerat. Incidunt eveniet dolorem provident officia aliquid perferendis mollitia
+                  repellat ut obcaecati, alias animi architecto commodi nemo maiores sed consequatur
+                  quisquam fugiat impedit beatae consectetur! Harum veritatis hic atque molestias
+                  perferendis, ex ea, nam quisquam ut quibusdam quos id cum labore magni dolore
+                  molestiae minima error iste, qui et veniam amet rem vel voluptatibus? Deserunt,
+                  tenetur dolores adipisci magni expedita rerum! Maxime nemo et dicta earum veniam
+                  provident commodi unde quos aut, accusamus ab iure voluptates ex mollitia placeat
+                  veritatis labore itaque exercitationem aliquam eveniet asperiores neque? Quod
+                  saepe ad dolore reiciendis ipsum nemo molestiae! Voluptatibus est aut iure
+                  consequuntur laudantium accusantium minus in, fuga sapiente doloremque ipsa nobis
+                  dignissimos quam, et reiciendis voluptatem aliquid similique asperiores quidem
+                  nesciunt quae doloribus fugit? Porro nam necessitatibus minima pariatur.
+                  Voluptatem corporis laborum illum possimus at consequatur sequi laudantium et,
+                  accusantium cupiditate qui natus deleniti minus atque eligendi id ea blanditiis
+                  tempora omnis quisquam est nulla. Fugiat mollitia accusantium et, illum, ipsa
+                  alias, maiores in quibusdam qui tempora eius reiciendis ipsum fuga. Eaque, dicta
+                  tempore. Recusandae tempore adipisci quia. Modi voluptas, suscipit esse delectus
+                  repudiandae ut nesciunt odit animi rerum laudantium debitis dolorem hic
+                  necessitatibus? Tempora dolore, sequi debitis eaque natus iste laborum porro enim
+                  quia tenetur illo nesciunt repellendus quas culpa voluptate maxime. Voluptatibus
+                  eius iure excepturi possimus similique quod et quibusdam dolores, corrupti nulla
+                  voluptate eaque quae ducimus asperiores dolorum incidunt, doloribus, laboriosam
+                  ipsa quisquam repellat soluta beatae? Accusamus corporis, animi explicabo
+                  doloribus harum sequi hic temporibus ipsam, dolores, laboriosam perspiciatis dolor
+                  provident praesentium minima. Libero cupiditate corrupti totam?
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-md my-5">
+          <div class="row">
+            <div class="col-lg-8 tets2">
+              <h2>col 8</h2>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam deleniti ipsum animi
+              voluptatem corrupti placeat perferendis est quasi quibusdam eos..
+            </div>
+            <div class="col-lg-4">
+              <h2>col 4</h2>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut esse illum quas ad
+              mollitia tempore, voluptatem vitae nemo neque delectus?
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12"></div>
+            <div class="col-md-12"></div>
+            <div class="col-md-12"></div>
+          </div>
+        </div>
+      </div>
+      <div class="container text-center">
+        <p>
+          <a
+          href="#multiCollapse1"
+          data-bs-toggle="collapse"
+          aria-controls="multiCollapse1"
+          role="button"
+          aria-expanded="false"
+          class="btn btn-secondary"
+          >Hello</a
+        >
+        <button
+          class="btn btn-secondary"
+          type="button"
+          data-bs-target="#multiCollapse2"
+          aria-expanded="false"
+          aria-controls="multiCollapse2"
+          data-bs-toggle="collapse"
+        >
+          World
+        </button>
+        <button
+          class="btn btn-secondary"
+          type="button"
+          data-bs-target=".multi-collapse"
+          aria-expanded="false"
+          aria-controls="multiCollapse1 multiCollapse2"
+          data-bs-toggle="collapse"
+        >
+          Hello World
+        </button>
+        <div class="row">
+          <div class="col">
+            <div class="collapse multi-collapse show" id="multiCollapse1">
+              <div class="card card-body">
+                <img
+                  src="https://images.pexels.com/photos/8273605/pexels-photo-8273605.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="collapse multi-collapse show" id="multiCollapse2">
+              <div class="card card-body">
+                <img
+                  src="https://images.pexels.com/photos/11077577/pexels-photo-11077577.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="collapse multi-collapse show" id="multiCollapse1">
+              <div class="card card-body">
+                <img
+                  src="https://images.pexels.com/photos/9656957/pexels-photo-9656957.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="collapse multi-collapse show" id="multiCollapse2">
+              <div class="card card-body">
+                <img
+                  src="https://images.pexels.com/photos/11198744/pexels-photo-11198744.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        </p>
+      </div>
+      <div class="container">
+        <!-- <div class="d-md-flex"> -->
+          
+        <div class="d-md-flex justify-content-around">
+          
+          <div class="p-5">1</div>
+          <div class="p-5">2</div>
+          <div class="p-5">3</div>
+        </div>
+      </div>
+    </section>
+    <!-- скрипт бустрапа -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
